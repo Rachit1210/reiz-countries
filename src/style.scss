@@ -1,0 +1,240 @@
+/*
+#FEFFDE => off white
+#8FFF8FB => light green
+#91C788 => light green darker
+#859686 => dark green
+*/
+
+* {
+    font-family: "lato", sans-serif;
+}
+
+body {
+    background: #E2FFE3;
+}
+
+.upper-block {
+    width: 25%;
+    height: 5%;
+    background: #859686;
+    color: #feffde;
+    font-size: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 50px 50px 10px 50px;
+    border-radius: 2px;
+}
+
+.button-father {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    margin-left: 10px;
+
+    .button {
+        width: 100px;
+        height: 50px;
+        background: #8FFF8F;
+        color: black;
+        font-size: 17px;
+        margin: 20px 0px 10px 40px;
+        border: 2px solid #859686;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .button:focus {
+        background-color: #859686;
+        color: #feffde;
+        border: 2px solid black;
+        border-radius: 3px;
+    }
+}
+
+.list-item {
+    display: flex;
+    flex-flow: column wrap;
+    width: 94%;
+    height: auto;
+    background-color: #CDFFCC;
+    color: #feffde;
+    list-style: none;
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+
+    .name,
+    .region,
+    .area {
+        max-width: fit-content;
+        color: #859686;
+        font-weight: bold;
+        line-height: 25px;
+        margin-left: 10px;
+    }
+}
+
+.filter-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .filter-label-father {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        gap: 20px;
+        width: 250px;
+        margin-right: 4%;
+
+        .filter-label {
+            width: 40px;
+            color: #859686;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .filter {
+            width: 180px;
+            height: auto;
+            border: 2px solid #859686;
+        }
+    }
+}
+
+.numbersFather {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+
+    .pages {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      
+      .current-page {
+        font-size: 20px;
+        font-weight: bold;
+        margin-right: 5px;
+      }
+      
+
+    .previous, .next {
+        width: 60px;
+        height: 30px;
+        background: #8FFF8F;
+        color: #404040;
+        font-size: 14px;
+        border: none;
+        border-radius: 3px;
+        text-align: center;
+        text-decoration: none;
+        line-height: 20px;
+        margin: 12px 20px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .previous:hover, .next:hover {
+        background: #feffde;
+        color: #404040;
+        border: none;
+    }
+
+    .previous {
+        box-shadow: 2px 2px 0px #feffde;
+    }
+
+    .next {
+        box-shadow: 2px 2px 0px #feffde;
+    }
+
+    .previous:active, .next:active {
+        transform: translateY(1px);
+        box-shadow: 1px 1px 0px #feffde;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .upper-block {
+        width: 260px;
+        font-size: 20px;
+    }
+
+    .button-father {
+        margin-left: 10px;
+
+        .button {
+            width: 60px;
+            height: 30px;
+            font-size: 10px;
+            margin-left: 40px;
+        }
+    }
+
+    .filter-block {
+        width: 400px;
+        margin-left: 40px;
+        margin-top: 20px;
+      
+        .filter-label-father {
+          justify-content: flex-start;
+          gap: 40px;
+          width: 400px;
+          margin-left: 10px;
+        }
+      
+        .filter {
+          background-color: #8FFF8F;
+          /* other properties */
+        }
+      }
+      
+    .list-item {
+        justify-content: center;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 422px) {
+    .upper-block {
+        margin-left: 90px;
+    }
+    .button-father {
+        justify-content: space-between;
+        width: 300px;
+        margin-left: 50px;
+
+        .button {
+            width: 57px;
+            height: 20px;
+            font-size: 9px;
+            margin-left: 40px;
+        }
+    }
+
+    .list-item {
+        justify-content: center;
+        width: 240px;
+    }
+
+    .filter-block {
+        margin: 10px 0px 0px 25px;
+
+        .filter-label-father {
+            justify-content: center;
+        }
+    }
+    .list-item-father {
+        .list-item {
+            margin-left: 50px;
+        }
+    }
+}
